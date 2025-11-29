@@ -21,18 +21,4 @@ spec:
     syncOptions:
       # Resource Management Options
       - CreateNamespace=true     # Auto-create namespace if it doesn't exist
-      - PrunePropagationPolicy=foreground  # Wait for dependent resources before deleting (foreground/background/orphan)
-      - PruneLast=true          # Prune resources after new resources are healthy
-      
-      # Validation and Dry-Run Options
-      - Validate=true           # Validate resources against Kubernetes API
-      - ApplyOutOfSyncOnly=true # Only apply resources that are out-of-sync (efficiency)
-      
-      # Server-Side Apply Options 
-      - ServerSideApply=true    # Use server-side apply instead of client-side
-      - RespectIgnoreDifferences=true # Honor ignoreDifferences during sync
-      
-      # Resource Handling Options
-      - FailOnSharedResource=false  # Don't fail if resource is managed by another app
-      - Replace=false           # Use replace instead of apply (destructive)
-      
+ 
