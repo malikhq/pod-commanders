@@ -1,0 +1,38 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: application-directory
+  namespace: argocd
+spec:
+  project: default
+  source:
+    directory:
+      exclude: '{*.sh,README.md}'
+      include: '*.yaml'
+      recurse: true
+    path: k8s
+    repoURL: https://github.com/malikhq/pod-commanders.git
+    targetRevision: pod-commanders
+  destination:
+    namespace: assignment-1
+    server: https://kubernetes.default.svc
+  syncPolicy:
+
+    syncOptions:
+      # Resource Management Options
+      - CreateNamespace=true     # Auto-create namespace if it doesn't exist
+      - PrunePropagationPolicy=foreground  # Wait for dependent resources before deleting (foreground/background/orphan)
+      - PruneLast=true          # Prune resources after new resources are healthy
+      
+      # Validation and Dry-Run Options
+      - Validate=true           # Validate resources against Kubernetes API
+      - ApplyOutOfSyncOnly=true # Only apply resources that are out-of-sync (efficiency)
+      
+      # Server-Side Apply Options 
+      - ServerSideApply=true    # Use server-side apply instead of client-side
+      - RespectIgnoreDifferences=true # Honor ignoreDifferences during sync
+      
+      # Resource Handling Options
+      - FailOnSharedResource=false  # Don't fail if resource is managed by another app
+      - Replace=false           # Use replace instead of apply (destructive)
+      
