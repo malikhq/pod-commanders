@@ -10,14 +10,15 @@ spec:
       exclude: '{*.sh,README.md}'
       include: '*.yaml'
       recurse: true
-    path: k8s
+    path: assignment-1/k8s
     repoURL: https://github.com/malikhq/pod-commanders.git
     targetRevision: pod-commanders
   destination:
     namespace: assignment-1
     server: https://kubernetes.default.svc
   syncPolicy:
-
+    automated:
+      enabled: false
     syncOptions:
       # Resource Management Options
       - CreateNamespace=true     # Auto-create namespace if it doesn't exist
