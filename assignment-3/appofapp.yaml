@@ -35,3 +35,4 @@ spec:
       - FailOnSharedResource=false  # Don't fail if resource is managed by another app
       - Replace=false           # Use replace instead of apply (destructive)
       
+

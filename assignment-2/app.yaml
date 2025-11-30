@@ -1,0 +1,25 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: pod-commanders-assignment-1
+  namespace: argocd
+spec:
+  project: default
+  source:
+    directory:
+      exclude: '{*.sh,README.md}'
+      include: '*.yaml'
+      recurse: true
+    path: assignment-1/k8s
+    repoURL: https://github.com/malikhq/pod-commanders.git
+    targetRevision: pod-commanders
+  destination:
+    namespace: assignment-2
+    name: second-cluster
+  syncPolicy:
+    automated:
+      enabled: false
+    syncOptions:
+      # Resource Management Options
+      - CreateNamespace=true     # Auto-create namespace if it doesn't exist
+ 
