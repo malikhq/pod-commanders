@@ -10,7 +10,7 @@ spec:
       exclude: '{*.sh,README.md}'
       include: '*.yaml'
       recurse: true
-    path: assignment-1/k8s
+    path: assignment-2/k8s
     repoURL: https://github.com/malikhq/pod-commanders.git
     targetRevision: pod-commanders
   destination:
