@@ -7,7 +7,7 @@ spec:
   project: default
   source:
     path: assignment-3/service/app2
-    repoURL: https://github.com/daasnigeria/daascohort3.git
+    repoURL: https://github.com/malikhq/pod-commanders.git
     targetRevision: pod-commanders
   destination:
     namespace: default
