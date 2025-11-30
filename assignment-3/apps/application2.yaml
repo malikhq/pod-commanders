@@ -10,7 +10,7 @@ spec:
     repoURL: https://github.com/malikhq/pod-commanders.git
     targetRevision: pod-commanders
   destination:
-    namespace: default
+    namespace: assignment-3
     server: https://kubernetes.default.svc
   syncPolicy:
     automated:
