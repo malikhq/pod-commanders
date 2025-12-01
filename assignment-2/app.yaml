@@ -10,7 +10,7 @@ spec:
       exclude: '{*.sh,README.md}'
       include: '*.yaml'
       recurse: true
-    path: argocd-example-apps/guestbook
+    path: guestbook
 
 
     repoURL: https://github.com/argoproj/argocd-example-apps.git
