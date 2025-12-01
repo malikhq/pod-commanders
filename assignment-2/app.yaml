@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: pod-commanders-assignment-1
+  name: pod-commanders
   namespace: argocd
 spec:
   project: default

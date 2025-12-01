@@ -6,7 +6,7 @@ Read about the of types of ApplicationSets Generators and create one example for
 
 # Solution
 # Get the base64-encoded client cert
-kubectl config view --raw -o jsonpath='{.users[?(@.name=="kind-kind")].user.client-certificate-data}'
+kubectl config view --raw -o jsonpath='{.users[?(@.name=="minikube")].user.client-certificate-data}'
 
 # Get the base64-encoded client key
-kubectl config view --raw -o jsonpath='{.users[?(@.name=="kind-kind")].user.client-key-data}'
+kubectl config view --raw -o jsonpath='{.users[?(@.name=="minikube")].user.client-key-data}'
