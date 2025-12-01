@@ -10,9 +10,11 @@ spec:
       exclude: '{*.sh,README.md}'
       include: '*.yaml'
       recurse: true
-    path: assignment-2/k8s
-    repoURL: https://github.com/malikhq/pod-commanders.git
-    targetRevision: pod-commanders
+    path: argocd-example-apps/guestbook
+
+
+    repoURL: https://github.com/argoproj/argocd-example-apps.git
+    targetRevision: master
   destination:
     namespace: assignment-2
     name: second-cluster
