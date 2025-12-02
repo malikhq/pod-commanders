@@ -1,18 +1,22 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: application-directory
+  name: app-of-app
   namespace: argocd
 spec:
   project: default
   source:
-    path: apps
-    repoURL: https://github.com/daasnigeria/daascohort3.git
-    targetRevision: main
+    path: assignment-3/apps
+    repoURL: https://github.com/malikhq/pod-commanders.git
+    targetRevision: pod-commanders
   destination:
-    namespace: default
+    namespace: assignment-3
     server: https://kubernetes.default.svc
   syncPolicy:
+    automated:
+      prune: true        # Delete resources that exist in cluster but not in Git
+      selfHeal: true     # Force sync when cluster state differs (even manual changes)
+      allowEmpty: false  # Prevent sync with zero resources (safety check)
     syncOptions:
       # Resource Management Options
       - CreateNamespace=true     # Auto-create namespace if it doesn't exist
@@ -31,3 +35,4 @@ spec:
       - FailOnSharedResource=false  # Don't fail if resource is managed by another app
       - Replace=false           # Use replace instead of apply (destructive)
       
+

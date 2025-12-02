@@ -4,7 +4,7 @@ kind: Deployment
 metadata:
   name: api-gateway
   annotations:
-    argocd.argoproj.io/sync-wave: "5"
+    argocd.argoproj.io/sync-wave: "1"
   labels:
     app: api-gateway
 spec:
@@ -68,7 +68,7 @@ kind: Service
 metadata:
   name: api-gateway
   annotations:
-    argocd.argoproj.io/sync-wave: "5"
+    argocd.argoproj.io/sync-wave: "1"
 spec:
   selector:
     app: api-gateway

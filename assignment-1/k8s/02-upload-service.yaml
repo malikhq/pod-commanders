@@ -4,7 +4,7 @@ kind: Deployment
 metadata:
   name: upload-service
   annotations:
-    argocd.argoproj.io/sync-wave: "4"
+    argocd.argoproj.io/sync-wave: "1"
   labels:
     app: upload-service
 spec:
@@ -60,7 +60,7 @@ kind: Service
 metadata:
   name: upload-service
   annotations:
-    argocd.argoproj.io/sync-wave: "4"
+    argocd.argoproj.io/sync-wave: "1"
 spec:
   selector:
     app: upload-service

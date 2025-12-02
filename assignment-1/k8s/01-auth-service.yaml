@@ -53,7 +53,7 @@ kind: Service
 metadata:
   name: auth-service
   annotations:
-    argocd.argoproj.io/sync-wave: "2"
+    argocd.argoproj.io/sync-wave: "3"
 spec:
   selector:
     app: auth-service

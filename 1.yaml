@@ -10,9 +10,9 @@ spec:
       exclude: '{*.sh,README.md}'
       include: '*.yaml'
       recurse: true
-    path: assignment-1/k8s
-    repoURL: https://github.com/malikhq/pod-commanders.git
-    targetRevision: pod-commanders
+    path: general_info/gitops-assignment/assignment-1/k8s
+    repoURL: https://github.com/daasnigeria/daascohort3.git
+    targetRevision: feature/pod-commanders/gitops-assignment
   destination:
     namespace: assignment-1
     server: https://kubernetes.default.svc
@@ -22,4 +22,3 @@ spec:
     syncOptions:
       # Resource Management Options
       - CreateNamespace=true     # Auto-create namespace if it doesn't exist
- 
