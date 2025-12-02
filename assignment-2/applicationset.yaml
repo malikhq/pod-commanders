@@ -11,8 +11,8 @@ spec:
         generators:
           # git generator, 'child' #1
           - git:
-              repoURL: https://github.com/argoproj/argo-cd.git
-              revision: HEAD
+              repoURL: https://github.com/malikhq/pod-commanders.git
+              revision: pod-commanders
               directories:
                 - path: applicationset/examples/matrix/cluster-addons/*
           # cluster generator, 'child' #2
@@ -26,8 +26,8 @@ spec:
     spec:
       project: default
       source:
-        repoURL: https://github.com/argoproj/argo-cd.git
-        targetRevision: HEAD
+        repoURL: https://github.com/malikhq/pod-commanders.git
+        targetRevision: pod-commanders
         path: '{{.path.path}}'
       destination:
         server: '{{.server}}'
