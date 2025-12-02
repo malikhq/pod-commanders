@@ -14,7 +14,7 @@ spec:
               repoURL: https://github.com/malikhq/pod-commanders.git
               revision: pod-commanders
               directories:
-                - path: applicationset/examples/matrix/cluster-addons/*
+                - path: assignment-2/apps/*
           # cluster generator, 'child' #2
           - clusters:
               selector:
