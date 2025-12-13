@@ -1,4 +1,5 @@
 # Assignment 1:
+
 Deploy the k8s application using ArgoCD with the following requirements:
 
 1. Configure sync waves to control resource creation order
