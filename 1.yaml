@@ -22,3 +22,4 @@ spec:
     syncOptions:
       # Resource Management Options
       - CreateNamespace=true     # Auto-create namespace if it doesn't exist
+      
