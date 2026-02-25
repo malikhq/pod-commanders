@@ -1,3 +1,4 @@
+
 # pod-commanders
 
-this repo contains meaningful project 
+this repository contains meaningful project 
